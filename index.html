@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js wf-loading">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,initial-scale=1.0,minimum-scale=1.0">
+
+        <title>Front-mend Framework</title>
+        <meta name="description" content="A bare bones front-end framework, with RequireJS, google analytics, typekit and modernizr.">
+
+        <link rel="stylesheet" href="css/main.css">
+
+        <script>
+        var config = {
+                debug: (location.hostname === "localhost") ? true : false,
+                analytics: "UA-XXXXXXXX-X",
+                typekit: "XXXXX"
+            },
+            require = {
+                baseUrl: (config.debug) ? "js/source/" : "js"
+            };
+        </script>
+        <script data-main="main.js" src="js/require.js"></script>
+        <!-- Replace with production version -->
+        <script src="js/vendor/modernizr-2.6.2.js"></script>
+    </head>
+    <body>
+        <p>This is Front-mend Boilerplate.</p>
+    </body>
+</html>

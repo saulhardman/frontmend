@@ -1,0 +1,51 @@
+@import "normalize";
+@import "helpers";
+@import "mixins";
+
+$color: #222;
+$font-size: 14;
+$font-family: "prenton", "helvetica", "arial", sans-serif;
+$text-highlight-color: #b3d4fc;
+
+html {
+    font-size: 62.5%;
+}
+
+.js {
+    &.wf-loading {
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            visibility: hidden;
+        }
+    }
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    color: $color;
+    font-family: $font-family;
+}
+
+body {
+    @include font-size($font-size);
+}
+
+::-moz-selection {
+    background: $text-highlight-color;
+    text-shadow: none;
+}
+
+::selection {
+    background: $text-highlight-color;
+    text-shadow: none;
+}
+
+/* Author: Saul Hardman (@saulhardman) */
+
+@import "media-queries";
