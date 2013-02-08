@@ -8,15 +8,15 @@ html(lang="en", class="no-js wf-loading")
     link(rel="stylesheet", href="css/main.css")
     script
         var config = {
-                debug: (location.hostname === "localhost") ? true : false,
-                analytics: "UA-XXXXXXXX-X",
-                typekit: "XXXXX"
-            },
-            require = {
-                baseUrl: (config.debug) ? "js/source/" : "js"
-            };
+            debug: (location.hostname === "localhost") ? true : false,
+            analytics: "UA-XXXXXXXX-X",
+            typekit: "XXXXX"
+        },
+        require = {
+            baseUrl: (config.debug) ? "js/source/" : "js"
+        };
     script(data-main="main.js", src="js/require.js")
     //- Replace with minified production version
     script(src="js/vendor/modernizr-2.6.2.js")
-  body
+body
     p Welcome to Frontmend
