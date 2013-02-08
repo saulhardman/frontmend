@@ -5,6 +5,6 @@ define(["autotrack"], function () {
         _gaq.push(['_trackPageview']);
         _gaq.push(['_trackPageLoadTime']);
     } else {
-        console.log("Analytics loaded.");
+        console.log("Google analytics not included.");
     }
 });

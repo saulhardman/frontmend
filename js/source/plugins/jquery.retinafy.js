@@ -1,4 +1,4 @@
-// jquery.retina.js @saulhardman mod of retina.js
+// jquery.retina.js a jquery port of retina.js by @saulhardman
 // retina.js, a high-resolution image swapper (http://retinajs.com), v0.0.2
 
 define(["jquery"], function ($) {
