@@ -8,7 +8,6 @@ define(function () {
                 console.log("Error on Typekit.load():", e);
             }
             clearTimeout(timeout);
-            console.log("Fonts loaded.");
         });
     } else {
         fontsInactive(false);

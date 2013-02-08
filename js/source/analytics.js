@@ -4,7 +4,5 @@ define(["autotrack"], function () {
         _gaq.push(['_setAccount', config.analytics]);
         _gaq.push(['_trackPageview']);
         _gaq.push(['_trackPageLoadTime']);
-    } else {
-        console.log("Google analytics not included.");
     }
 });
