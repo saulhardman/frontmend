@@ -8,4 +8,4 @@
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
-    jQuery, Modernizr, RequireJS
+    jQuery, Modernizr, analytics.js, RequireJS, bower, grunt

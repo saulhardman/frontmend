@@ -1,25 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js wf-loading">
+<html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,initial-scale=1.0,minimum-scale=1.0">
     <title>Frontmend Framework</title>
-    <meta name="title" content="A bare bones front-end framework, with RequireJS, google analytics, typekit, retina.js and modernizr.">
+    <meta name="description" content="A bare bones front-end framework powered by RequireJS, bower, and grunt.">
     <link rel="stylesheet" href="css/main.css">
-    <script>
-      var config = {
-          debug: (location.hostname === "localhost") ? true : false,
-          analytics: "UA-XXXXXXXX-X",
-          typekit: "XXXXX"
-      },
-      require = {
-          baseUrl: (config.debug) ? "js/source/" : "js"
-      };
-    </script>
-    <script data-main="main.js" src="js/require.js"></script>
-    <script src="js/vendor/modernizr-2.6.2.js"></script>
+    <script src="js/components/modernizr/modernizr.js"></script>
   </head>
 </html>
 <body>
   <p>Welcome to Frontmend</p>
+  <script src="js/components/requirejs/require.js" data-main="js/main"></script>
 </body>

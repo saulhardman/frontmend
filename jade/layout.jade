@@ -1,22 +1,13 @@
 doctype 5
-html(lang="en", class="no-js wf-loading")
+html(lang="en", class="no-js")
   head
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width,initial-scale=1.0,initial-scale=1.0,minimum-scale=1.0")
-    title Frontmend Framework
-    meta(name="title", content="A bare bones front-end framework, with RequireJS, google analytics, typekit, retina.js and modernizr.")
+    block title
+        title Frontmend Framework
+    meta(name="description", content="A bare bones front-end framework powered by RequireJS, bower, and grunt.")
     link(rel="stylesheet", href="css/main.css")
-    script
-        var config = {
-            debug: (location.hostname === "localhost") ? true : false,
-            analytics: "UA-XXXXXXXX-X",
-            typekit: "XXXXX"
-        },
-        require = {
-            baseUrl: (config.debug) ? "js/source/" : "js"
-        };
-    script(data-main="main.js", src="js/require.js")
-    //- Replace with minified production version
-    script(src="js/vendor/modernizr-2.6.2.js")
+    script(src="js/components/modernizr/modernizr.js")
 body
-    p Welcome to Frontmend
+    block content
+    block javascript

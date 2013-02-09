@@ -1,0 +1,11 @@
+{
+  "name": "Frontmend",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "*",
+    "requirejs": "*",
+    "modernizr": "*",
+    "handlebars-amd": "*",
+    "analytics": "*"
+  }
+}

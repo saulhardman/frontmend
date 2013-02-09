@@ -1,0 +1,27 @@
+{
+  "name": "frontmend",
+  "version": "0.0.1",
+  "description": "A bare bones front-end framework powered by RequireJS, bower, and grunt",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saulhardman/frontmend.git"
+  },
+  "contributors": [
+    {
+      "name": "Saul Hardman",
+      "email": "hello@iamsaul.co.uk",
+      "url": "http://iamsaul.co.uk"
+    }
+  ],
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-requirejs": "*",
+    "grunt-contrib-handlebars": "*"
+  }
+}
