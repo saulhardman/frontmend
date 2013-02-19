@@ -4,11 +4,17 @@ A bare bones front-end framework, with RequireJS, bower, and grunt.
 
 ## My Flow
 
-`cd yourRepoName`
-`ln -s pre-commit.sh .git/hooks/pre-commit`
-`chmod +x .git/hooks/pre-commit`
+`git clone git@github.com:saulhardman/frontmend.git`
+
+`cd frontmend`
 
 `sudo npm install -g bower`
+
+`sudo npm install -g grunt`
+
+`bower install && npm install`
+
+`grunt build`
 
 ## To-do
 

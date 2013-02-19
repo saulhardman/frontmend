@@ -4,14 +4,20 @@ var config = {
 
 requirejs.config({
     paths: {
-        "jquery": ["//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min", "components/jquery/jquery"],
-        "analytics": "components/analytics/analytics",
-        "handlebars": "components/handlebars-amd/handlebars.runtime",
-        "templates": "templates/templates"
+        jquery: ["//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min", "components/jquery/jquery.min"],
+        handlebars: "components/handlebars/handlebars.runtime",
+        analytics: "components/analytics/analytics",
+        templates: "templates/templates",
+        log: "utilities/log"
+    },
+    shim: {
+        handlebars: {
+            exports: "Handlebars"
+        }
     }
 });
 
-requirejs(["jquery", "templates", "analytics", "utilities/log"], function ($, templates, analytics) {
+requirejs(["jquery", "templates", "analytics", "log"], function ($, templates, analytics) {
 
     var main = {
         init: function () {

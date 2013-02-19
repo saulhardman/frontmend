@@ -6,6 +6,3 @@ node_modules/
 
 # We don't need the bower installed components
 js/components/
-
-# Processed dist/ (production) directory not needed
-dist/

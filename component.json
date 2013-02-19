@@ -2,10 +2,12 @@
   "name": "Frontmend",
   "version": "0.0.1",
   "dependencies": {
-    "jquery": "*",
     "requirejs": "*",
+    "jquery": "*",
+    "backbone": "*",
+    "underscore": "*",
+    "handlebars": "*",
     "modernizr": "*",
-    "handlebars-amd": "*",
     "analytics": "*"
   }
 }

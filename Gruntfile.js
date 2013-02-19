@@ -2,22 +2,20 @@ module.exports = function(grunt) {
 
     // Project configuration.
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
+        pkg: grunt.file.readJSON("package.json"),
         requirejs: {
             compile: {
                 options: {
-                    appDir: "./",
                     baseUrl: "js",
-                    dir: "dist",
                     mainConfigFile: "js/main.js",
+                    skipDirOptimize: true,
+                    name: "main",
                     paths: {
                         jquery: "empty:"
                     },
-                    name: "main",
-                    findNestedDependencies: true,
-                    preserveLicenseComments: false,
-                    optimizeCss: "none",
-                    fileExclusionRegExp: /^\.|node_modules|Gruntfile|\.md|package.json|jade|scss|tests|modernizr/
+                    include: ["components/requirejs/require.js"],
+                    out: "js/main.min.js",
+                    preserveLicenseComments: false
                 }
             }
         },
@@ -40,7 +38,6 @@ module.exports = function(grunt) {
         connect: {
             server: {
                 options: {
-                    keepalive: true,
                     port: 3000
                 }
             }
@@ -60,7 +57,6 @@ module.exports = function(grunt) {
     // build the project using requirejs (r.js) and handlebars
     grunt.registerTask("build", ["handlebars", "requirejs"]);
 
-    // run a basic http server (settings above)
-    grunt.registerTask("server", ["connect"]);
+    grunt.registerTask("default", ["connect", "watch"]);
 
 };
