@@ -1,8 +1,12 @@
-# Frontmend Framework
+# Frontmend
 
-A bare bones front-end "delete friendly" boilerplate, fuelled bower and grunt.
+A bare bones front-end "delete friendly" boilerplate, fuelled by [bower](http://twitter.github.com/bower/) and [grunt](http://gruntjs.com/).
 
-## My Flow
+## Requirements
+
+To use Frontmend you need [node.js](http://nodejs.org/), follow the instructions on the site to get setup on your chosen operating system.
+
+## Getting Started
 
 Create a directory for your project and jump into it.
 
@@ -37,6 +41,7 @@ The build task uses the r.js optimizer to concatinate and minify your code, incl
 
 ## To-do
 
+- **Commenting**.
 - Flesh out the mixins .scss file with my most used and common mixins.
 - See what can be done at this stage to ease the introduction of JavaScript testing.
 - create a node package using npm (like [heisenburg.js](https://github.com/Heisenbergjs/heisenberg-npm)).
