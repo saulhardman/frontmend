@@ -11,7 +11,8 @@ module.exports = function(grunt) {
                     skipDirOptimize: true,
                     name: "main",
                     paths: {
-                        jquery: "empty:"
+                        jquery: "empty:",
+                        ga: "empty:"
                     },
                     include: ["components/requirejs/require.js"],
                     out: "js/main.min.js",

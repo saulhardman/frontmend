@@ -6,34 +6,24 @@ requirejs.config({
     paths: {
         jquery: ["//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min", "components/jquery/jquery.min"],
         handlebars: "components/handlebars/handlebars.runtime",
-        analytics: "components/analytics/analytics",
-        templates: "templates/templates",
-        log: "utilities/log"
+        ga: "//google-analytics.com/ga"
     },
     shim: {
         handlebars: {
             exports: "Handlebars"
+        },
+        ga: {
+            exports: "_gaq"
         }
     }
 });
 
-requirejs(["jquery", "templates", "analytics", "log"], function ($, templates, analytics) {
+requirejs(["jquery", "templates/templates", "modules/analytics", "utilities/log"], function ($, templates, analytics) {
 
     var main = {
         init: function () {
             console.log("Hello World! Welcome to Frontmend.");
-            this.analytics();
             $("body").prepend(templates.example());
-        },
-        analytics: function () {
-            if (config.debug === false) {
-                analytics.initialize({
-                    "Google Analytics" : {
-                        apiKey: "UA-XXXXXXX-X"
-                    }
-                });
-                analytics.pageview();
-            }
         }
     };
 
