@@ -41,10 +41,14 @@ The build task uses the r.js optimizer to concatinate and minify your code, incl
 
 ### Updates
 
-#### V0.0.1
+**V0.0.2** (20/02/13)
 
-- 20/02/13 – Added grunt-contrib-jade for dynamic jade template compilation
-- 20/02/13 – Added an Events object to the app namespace which acts as a mediator
+- Added grunt-contrib-jade for dynamic jade template compilation
+- Added an Events object to the app namespace which acts as a mediator
+
+**V0.0.1**
+
+- Initial release.
 
 ### To-do
 

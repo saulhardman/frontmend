@@ -1,6 +1,6 @@
 {
   "name": "frontmend",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A bare bones front-end 'delete friendly' boilerplate, fuelled by bower and grunt",
   "main": "index.html",
   "repository": {
