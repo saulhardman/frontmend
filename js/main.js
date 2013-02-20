@@ -18,17 +18,26 @@ requirejs.config({
     }
 });
 
-requirejs(["jquery", "templates/templates", "modules/analytics", "utilities/log"], function ($, templates, analytics) {
+requirejs(["jquery", "modules/example", "modules/analytics", "utilities/log"], function ($, example, analytics) {
 
-    var main = {
+    var app = {
+        Modules: {
+            example: example,
+            analytics: analytics
+        },
+        Events: $({}),
         init: function () {
+            var i;
+            for (i in this.Modules) {
+                this.Modules[i].init(this.Events);
+            }
+            this.Events.trigger("render");
             console.log("Hello World! Welcome to Frontmend.");
-            $("body").prepend(templates.example());
         }
     };
 
     $(document).ready(function () {
-        main.init();
+        app.init();
     });
 
 });

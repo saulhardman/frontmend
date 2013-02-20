@@ -7,7 +7,7 @@ this["templates"]["example"] = Handlebars.template(function (Handlebars,depth0,h
   
 
 
-  return "<p>This is a handlebars template!</p>";});
+  return "<p>This is a handlebars template, honest!</p>";});
 
 return this["templates"];
 

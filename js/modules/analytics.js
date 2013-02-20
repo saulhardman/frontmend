@@ -7,9 +7,10 @@ define(["ga"], function (ga) {
                 ga.push(["_trackPageLoadTime"]);
                 return ga;
             } else {
+                console.log("Debug mode: %s.", "no analytics");
                 return this;
             }
         }
     };
-    return analytics.init();
+    return analytics;
 });

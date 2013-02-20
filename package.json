@@ -1,7 +1,7 @@
 {
   "name": "frontmend",
   "version": "0.0.1",
-  "description": "A bare bones front-end framework powered by RequireJS, bower, and grunt",
+  "description": "A bare bones front-end 'delete friendly' boilerplate, fuelled by bower and grunt",
   "main": "index.html",
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
     "grunt-contrib-connect": "*",
     "grunt-contrib-watch": "*",
     "grunt-contrib-requirejs": "*",
-    "grunt-contrib-handlebars": "*"
+    "grunt-contrib-handlebars": "*",
+    "grunt-contrib-jade": "*"
   }
 }

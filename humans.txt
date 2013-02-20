@@ -3,9 +3,9 @@
 
 # TEAM
 
-    Saul Hardman -- Designer & Developer -- @saulhardman
+    Saul Hardman -- @saulhardman
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
-    jQuery, Modernizr, analytics.js, RequireJS, bower, grunt
+    - Bower, Grunt
+    - jQuery, Modernizr, Google Analytics, RequireJS, Handlebars

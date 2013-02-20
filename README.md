@@ -39,10 +39,14 @@ The build task uses the r.js optimizer to concatinate and minify your code, incl
 
 `grunt build`
 
-## To-do
+### Updates
+
+20/02/13 – Added grunt-contrib-jade for dynamic jade template compilation
+20/02/13 – Added an Events object to the app namespace which acts as a mediator
+
+### To-do
 
 - **Commenting**.
 - Flesh out the mixins .scss file with my most used and common mixins.
 - See what can be done at this stage to ease the introduction of JavaScript testing.
 - create a node package using npm (like [heisenburg.js](https://github.com/Heisenbergjs/heisenberg-npm)).
-- utilise the mediator pattern to trigger and receive messages across modules.
