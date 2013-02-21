@@ -19,10 +19,12 @@
   "dependencies": {},
   "devDependencies": {
     "grunt": "*",
-    "grunt-contrib-connect": "*",
-    "grunt-contrib-watch": "*",
     "grunt-contrib-requirejs": "*",
     "grunt-contrib-handlebars": "*",
-    "grunt-contrib-jade": "*"
+    "grunt-contrib-jade": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-manifest": "*",
+    "grunt-contrib-connect": "*"
   }
 }

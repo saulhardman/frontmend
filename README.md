@@ -41,10 +41,15 @@ The build task uses the r.js optimizer to concatinate and minify your code, incl
 
 ### Updates
 
-**V0.0.2** (20/02/13)
+**V0.0.3** [21/02/13]
 
-- Added grunt-contrib-jade for dynamic jade template compilation
-- Added an Events object to the app namespace which acts as a mediator
+- Added grunt-contrib-sass for scss compilation.
+- Added grunt-contrib-manifest, after forking existing plugin and bringing up to date for grunt v0.4.0.
+
+**V0.0.2** [20/02/13]
+
+- Added grunt-contrib-jade for dynamic jade template compilation.
+- Added an Events object to the app namespace which acts as a mediator.
 
 **V0.0.1**
 
@@ -56,3 +61,4 @@ The build task uses the r.js optimizer to concatinate and minify your code, incl
 - Flesh out the mixins .scss file with my most used and common mixins.
 - See what can be done at this stage to ease the introduction of JavaScript testing.
 - create a node package using npm (like [heisenburg.js](https://github.com/Heisenbergjs/heisenberg-npm)).
+- implement grunt-contrib-copy before running r.js to slim down the dest folder.

@@ -54,6 +54,17 @@ module.exports = function(grunt) {
                 ]
             }
         },
+        sass: {
+            compile: {
+                options: {
+                    style: "compressed",
+                    cacheLocation: "css/scss/.sass-cache"
+                },
+                files: {
+                    "css/main.css": "css/scss/main.scss"
+                }
+            }
+        },
         watch: {
             handlebars: {
                 files: "js/templates/*.hbs",
@@ -62,6 +73,22 @@ module.exports = function(grunt) {
             jade: {
                 files: "jade/*.jade",
                 tasks: ["jade"]
+            },
+            sass: {
+                files: "css/sass/*.scss",
+                tasks: ["sass"]
+            }
+        },
+        manifest: {
+            generate: {
+                options: {
+                    preferOnline: true
+                },
+                src: [
+                    "*.html",
+                    "js/*.min.js",
+                    "css/*.css"
+                ]
             }
         },
         connect: {
@@ -77,11 +104,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-requirejs");
     grunt.loadNpmTasks("grunt-contrib-handlebars");
     grunt.loadNpmTasks("grunt-contrib-jade");
+    grunt.loadNpmTasks("grunt-contrib-sass");
     grunt.loadNpmTasks("grunt-contrib-watch");
+    grunt.loadNpmTasks("grunt-contrib-manifest");
     grunt.loadNpmTasks("grunt-contrib-connect");
 
-    // build the project using requirejs (r.js) and handlebars
-    grunt.registerTask("build", ["handlebars", "requirejs"]);
+    // build the project using requirejs (r.js), handlebars, jade, sass and manifest generator
+    grunt.registerTask("build", ["handlebars", "jade", "sass", "requirejs", "manifest"]);
 
     grunt.registerTask("default", ["connect", "watch"]);
 
