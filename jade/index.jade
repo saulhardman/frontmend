@@ -5,6 +5,7 @@ block content
     p(id="example")
 
 block javascript
-    //- Production JavaScript, include after running `grunt build`
-    //- script(src="js/main.min.js")
-    script(src="js/components/requirejs/require.js", data-main="js/main")
+    if debug
+        script(src="js/components/requirejs/require.js", data-main="js/main")
+    else
+        script(src="js/main.min.js")

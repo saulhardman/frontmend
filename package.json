@@ -1,30 +1,40 @@
 {
   "name": "frontmend",
-  "version": "0.0.2",
+  "preferGlobal": "true",
+  "version": "0.0.3",
   "description": "A bare bones front-end 'delete friendly' boilerplate, fuelled by bower and grunt",
-  "main": "index.html",
+  "author": "Saul Hardman <hello@iamsaul.co.uk> (http://iamsaul.co.uk)",
+  "contributors": [],
+  "main": "js/main.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/saulhardman/frontmend.git"
   },
-  "contributors": [
-    {
-      "name": "Saul Hardman",
-      "email": "hello@iamsaul.co.uk",
-      "url": "http://iamsaul.co.uk"
-    }
-  ],
+  "homepage": "https://saulhardman.github.com/frontmend",
+  "bugs": {
+    "url": "https://github.com/saulhardman/frontmend/issues",
+    "email": "hello@iamsaul.co.uk"
+  },
   "license": "MIT",
-  "readmeFilename": "README.md",
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "keywords": [
+    "frontmend",
+    "frontend",
+    "clientside",
+    "boilerplate"
+  ],
   "dependencies": {},
   "devDependencies": {
-    "grunt": "*",
+    "grunt": "~0.4.0",
     "grunt-contrib-requirejs": "*",
     "grunt-contrib-handlebars": "*",
     "grunt-contrib-jade": "*",
     "grunt-contrib-sass": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-contrib-manifest": "*",
-    "grunt-contrib-connect": "*"
+    "grunt-manifest": "*",
+    "grunt-regarde": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-livereload": "*"
   }
 }

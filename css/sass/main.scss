@@ -4,23 +4,11 @@
 
 $color: #222;
 $font-size: 14;
-$font-family: "prenton", "helvetica", "arial", sans-serif;
+$font-family: helvetica, arial, verdana, sans-serif;
 $text-highlight-color: #b3d4fc;
 
 html {
     font-size: 62.5%;
-}
-
-.js {
-    &.wf-loading {
-        body,
-        button,
-        input,
-        select,
-        textarea {
-            visibility: hidden;
-        }
-    }
 }
 
 body,
@@ -48,8 +36,13 @@ body {
 
 /* Author: Saul Hardman (@saulhardman) */
 
+body {
+    padding: 30px;
+}
+
 p {
-    font-weight: bold;
+    margin: 20px 0 0;
+    font-weight: 500;
 }
 
 @import "media-queries";

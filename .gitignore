@@ -6,3 +6,6 @@ node_modules/
 
 # We don't need the bower installed components
 js/components/
+
+# SASS cache
+css/sass/.sass-cache

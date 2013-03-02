@@ -1,4 +1,4 @@
-define(["jquery", "templates/templates"], function ($, templates) {
+define(["jquery", "templates"], function ($, templates) {
     var example = {
         $el: $("#example"),
         templates: templates,
@@ -10,7 +10,7 @@ define(["jquery", "templates/templates"], function ($, templates) {
             this.Events.on("render", $.proxy(this.render, this));
         },
         render: function () {
-            this.$el.html(this.templates["example"]());
+            this.$el.html(this.templates.example());
         }
     };
     return example;

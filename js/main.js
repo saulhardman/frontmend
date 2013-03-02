@@ -6,7 +6,8 @@ requirejs.config({
     paths: {
         jquery: ["//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min", "components/jquery/jquery.min"],
         handlebars: "components/handlebars/handlebars.runtime",
-        ga: "//google-analytics.com/ga"
+        ga: "//google-analytics.com/ga",
+        templates: "templates/templates"
     },
     shim: {
         handlebars: {
