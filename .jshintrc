@@ -1,0 +1,10 @@
+{
+    "globals": {
+        "window": true,
+        "console": true,
+        "requirejs": true,
+        "require": true,
+        "define": true,
+        "config": true
+    }
+}

@@ -8,4 +8,4 @@ node_modules/
 js/components/
 
 # SASS cache
-css/sass/.sass-cache
+.sass-cache

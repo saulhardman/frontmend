@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" manifest="manifest.appcache" class="no-js">
+<html lang="en" dir="ltr" manifest="" class="no-js">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
     <title>Frontmend</title>
     <meta name="description" content="A bare bones front-end 'delete friendly' boilerplate, fuelled by bower and grunt">
     <link rel="stylesheet" href="css/main.css">
-    <!-- Replace with production version-->
     <script src="js/components/modernizr/modernizr.js"></script>
   </head>
+  <body>
+    <p>Welcome to Frontmend</p>
+    <p id="example"></p>
+    <script>var config = { debug: true };</script>
+    <script src="js/components/requirejs/require.js" data-main="js/main"></script>
+  </body>
 </html>
-<body>
-  <p>Welcome to Frontmend</p>
-  <p id="example"></p>
-  <script src="js/main.min.js"></script>
-</body>

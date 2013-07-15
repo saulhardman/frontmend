@@ -41,6 +41,15 @@ The build task uses the r.js optimizer to concatenate and minify your code, incl
 
 ### Updates
 
+**v.0.0.4** [15/07/13]
+
+- Renamed scss files as includes, updated to compass rather than just sass.
+- Updated normalize to v2.1.2.
+- Using almond.js rather than require.js for minified single JavaScript file.
+- Rendering handlebars templates from jade.
+- Committed empty directories.
+- Added grunt modernizr to add custom, dependency-based modernizr build to build process.
+
 **v0.0.3** [02/03/13]
 
 - Added grunt-contrib-sass for scss compilation.
@@ -58,6 +67,8 @@ The build task uses the r.js optimizer to concatenate and minify your code, incl
 ### To-do
 
 - **Commenting**.
+- Turn project into yo generator.
+- Add grunt image optimisation.
 - Flesh out the mixins .scss file with my most used and common mixins.
 - See what can be done at this stage to ease the introduction of JavaScript testing.
 - implement grunt-contrib-copy before running r.js to slim down the dest folder.

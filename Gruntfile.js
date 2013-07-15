@@ -1,10 +1,4 @@
 "use strict";
-var path = require("path");
-var lrSnippet = require("grunt-contrib-livereload/lib/utils").livereloadSnippet;
-
-var folderMount = function folderMount (connect, point) {
-    return connect["static"](path.resolve(point));
-};
 
 module.exports = function (grunt) {
 
@@ -17,11 +11,7 @@ module.exports = function (grunt) {
                     baseUrl: "js",
                     mainConfigFile: "js/main.js",
                     name: "main",
-                    paths: {
-                        jquery: "empty:",
-                        ga: "empty:"
-                    },
-                    include: ["components/requirejs/require.js"],
+                    include: ["components/almond/almond.js"],
                     out: "js/main.min.js"
                 }
             }
@@ -31,7 +21,7 @@ module.exports = function (grunt) {
                 options: {
                     namespace: "templates",
                     amd: true,
-                    processName: function(filename) {
+                    processName: function (filename) {
                         var split = filename.split("/"),
                             len = split.length;
                         return split[len-1].toLowerCase().replace(".hbs", "");
@@ -53,9 +43,17 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: "jade/",
+                        cwd: "views/",
                         src: ["*.jade", "!layout.jade"],
                         ext: ".html"
+                    },
+                    {
+                        expand: true,
+                        cwd: "views/templates/",
+                        src: ["*.jade"],
+                        client: true,
+                        dest: "js/templates/",
+                        ext: ".hbs"
                     }
                 ]
             },
@@ -69,21 +67,27 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: "jade/",
+                        cwd: "views/",
                         src: ["*.jade", "!layout.jade"],
                         ext: ".html"
+                    },
+                    {
+                        expand: true,
+                        cwd: "views/templates/",
+                        src: ["*.jade"],
+                        client: true,
+                        dest: "js/templates/",
+                        ext: ".hbs"
                     }
                 ]
             }
         },
-        sass: {
+        compass: {
             compile: {
                 options: {
-                    style: "compressed",
-                    cacheLocation: "css/sass/.sass-cache"
-                },
-                files: {
-                    "css/main.css": "css/sass/main.scss"
+                    sassDir: "css/sass",
+                    cssDir: "css",
+                    outputStyle: "compressed"
                 }
             }
         },
@@ -99,34 +103,43 @@ module.exports = function (grunt) {
                 ]
             }
         },
-        regarde: {
+        watch: {
             handlebars: {
                 files: "js/templates/*.hbs",
                 tasks: ["handlebars"]
             },
             jade: {
-                files: "jade/*.jade",
+                files: "views/**/*.jade",
                 tasks: ["jade:development"]
             },
-            sass: {
+            compass: {
                 files: "css/sass/*.scss",
-                tasks: ["sass"]
-            },
-            // Run livereload whenever any JavaScript, html or CSS files are compiled
-            livereload: {
-                files: ["js/**/*.js", "*.html", "css/**/*.css"],
-                tasks: ["livereload"]
+                tasks: ["compass"]
             }
         },
         connect: {
-            livereload: {
-                options: {
-                    port: 9001,
-                    middleware: function (connect, options) {
-                        return [lrSnippet, folderMount(connect, ".")];
-                    }
-                }
+            server: {}
+        },
+        jshint: {
+            // lint /your/ JavaScript
+            all: ["js/main.js", "js/modules/*.js"],
+            options: {
+                jshintrc: ".jshintrc"
             }
+        },
+        clean: {
+            "default": ["manifest.appcache"]
+        },
+        modernizr: {
+            devFile: "js/components/modernizr/modernizr.js",
+            outputFile: "js/utilities/modernizr.min.js",
+            extra: {
+                load: false
+            },
+            files: [
+                "js/main.min.js",
+                "css/main.css"
+            ]
         }
     });
 
@@ -134,15 +147,17 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-requirejs");
     grunt.loadNpmTasks("grunt-contrib-handlebars");
     grunt.loadNpmTasks("grunt-contrib-jade");
-    grunt.loadNpmTasks("grunt-contrib-sass");
-    grunt.loadNpmTasks("grunt-manifest");
-    grunt.loadNpmTasks("grunt-regarde");
+    grunt.loadNpmTasks("grunt-contrib-compass");
+    grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks("grunt-contrib-connect");
-    grunt.loadNpmTasks("grunt-contrib-livereload");
+    grunt.loadNpmTasks("grunt-contrib-jshint");
+    grunt.loadNpmTasks("grunt-contrib-clean");
+    grunt.loadNpmTasks("grunt-modernizr");
+    grunt.loadNpmTasks("grunt-manifest");
 
     // build the project using requirejs (r.js), handlebars, jade, sass and manifest generator
-    grunt.registerTask("build", ["handlebars", "jade:production", "sass", "requirejs", "manifest"]);
+    grunt.registerTask("build", ["jshint", "handlebars", "jade:production", "compass", "requirejs", "modernizr", "manifest"]);
 
-    grunt.registerTask("default", ["livereload-start", "connect", "regarde"]);
+    grunt.registerTask("default", ["jade:development", "clean", "connect", "watch"]);
 
 };

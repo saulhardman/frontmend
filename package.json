@@ -27,14 +27,17 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "grunt": "~0.4.0",
-    "grunt-contrib-requirejs": "*",
-    "grunt-contrib-handlebars": "*",
-    "grunt-contrib-jade": "*",
-    "grunt-contrib-sass": "*",
-    "grunt-manifest": "*",
-    "grunt-regarde": "*",
-    "grunt-contrib-connect": "*",
-    "grunt-contrib-livereload": "*"
+    "grunt": "~0.4.1",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-contrib-handlebars": "~0.5.9",
+    "grunt-contrib-jade": "~0.7.0",
+    "grunt-contrib-compass": "~0.3.0",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-contrib-connect": "~0.3.0",
+    "grunt-contrib-livereload": "~0.1.2",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-clean": "~0.4.1",
+    "grunt-manifest": "~0.4.0",
+    "grunt-modernizr": "~0.3.0"
   }
 }

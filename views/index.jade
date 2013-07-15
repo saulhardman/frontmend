@@ -5,7 +5,7 @@ block content
     p(id="example")
 
 block javascript
-    if debug
+    if debug == true
         script(src="js/components/requirejs/require.js", data-main="js/main")
     else
         script(src="js/main.min.js")

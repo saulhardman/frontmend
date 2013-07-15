@@ -1,12 +1,8 @@
-var config = {
-    debug: (location.hostname === "localhost") ? true : false
-};
-
 requirejs.config({
     paths: {
-        jquery: ["//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min", "components/jquery/jquery.min"],
+        jquery: "components/jquery/jquery",
         handlebars: "components/handlebars/handlebars.runtime",
-        ga: "//google-analytics.com/ga",
+        ga: "utilities/analytics",
         templates: "templates/templates"
     },
     shim: {
@@ -14,7 +10,7 @@ requirejs.config({
             exports: "Handlebars"
         },
         ga: {
-            exports: "_gaq"
+            exports: "ga"
         }
     }
 });
@@ -37,7 +33,7 @@ requirejs(["jquery", "modules/example", "modules/analytics", "utilities/log"], f
         }
     };
 
-    $(document).ready(function () {
+    $(window.document).ready(function () {
         app.init();
     });
 
